@@ -1,10 +1,9 @@
-package tests.steps;
+package br.andrey.tests.steps;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import tests.pages.FramesPage;
+import br.andrey.tests.pages.FramesPage;
 
 public class FramesSteps {
     FramesPage framesPage = new FramesPage();

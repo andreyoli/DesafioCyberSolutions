@@ -1,6 +1,6 @@
-package tests.pages;
+package br.andrey.tests.pages;
 
-import core.Dsl;
+import br.andrey.core.Dsl;
 import org.openqa.selenium.By;
 
 public class FramesPage {

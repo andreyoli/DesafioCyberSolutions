@@ -1,4 +1,4 @@
-package core;
+package br.andrey.core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import java.util.concurrent.TimeUnit;
 
 public class Dsl {
     private final WebDriver browser;
@@ -17,6 +18,7 @@ public class Dsl {
     public Dsl(){
         WebDriverManager.chromedriver().setup();
         browser = new ChromeDriver();
+        browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         browser.manage().window().setSize(new Dimension(1024,720));
     }

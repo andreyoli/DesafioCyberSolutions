@@ -1,7 +1,6 @@
-package tests.pages;
+package br.andrey.tests.pages;
 
-import core.Dsl;
-import io.cucumber.java.After;
+import br.andrey.core.Dsl;
 import org.openqa.selenium.By;
 
 public class DatepickerPage {

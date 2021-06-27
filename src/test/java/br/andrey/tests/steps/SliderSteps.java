@@ -1,10 +1,9 @@
-package tests.steps;
+package br.andrey.tests.steps;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import tests.pages.SliderPage;
+import br.andrey.tests.pages.SliderPage;
 
 public class SliderSteps {
     SliderPage sliderPage = new SliderPage();
