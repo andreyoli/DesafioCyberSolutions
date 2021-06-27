@@ -5,13 +5,17 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import br.andrey.tests.pages.SliderPage;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class SliderSteps {
+    static Logger logger = LoggerFactory.getLogger(SliderSteps.class);
     SliderPage sliderPage = new SliderPage();
 
     @Given("that i open the page Slider")
     public void openPage() {
         sliderPage.openSliderPage();
-        System.out.println("Open page");
+        logger.info("Open page");
     }
 
     @Then("move slider 50%")
@@ -19,9 +23,9 @@ public class SliderSteps {
         Integer percentage = 50;
         sliderPage.moveSlider(percentage);
         Assert.assertEquals("left: " + percentage + "%;", sliderPage.getSliderStyles());
-        System.out.println("Moved slider");
+        logger.info("Moved slider");
         sliderPage.closeBrowser();
-        System.out.println("Closed browser");
+        logger.info("Closed browser");
     }
 
 }
